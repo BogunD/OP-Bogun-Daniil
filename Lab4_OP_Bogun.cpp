@@ -19,9 +19,8 @@ int main()
     {
         sum += 1 / (k * pow((2 * k + 1), 2));
     }
-
     cout << "Sum = " << sum << endl;
     system("pause");
     return 0;
-
 }
+
