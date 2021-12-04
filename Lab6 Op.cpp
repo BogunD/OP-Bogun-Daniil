@@ -13,7 +13,7 @@ void func1(double a, double b, double c) {
 	else
 		cout << "Square = " << formula(a, b, c) << endl;
 }
-void inp(double a, double b, double c) {
+void inp(double &a, double &b, double &c) {
 	do {
 		cout << "Введіть довжини сторін трикутника\n а = "; cin >> a;
 		cout << " b = "; cin >> b;
