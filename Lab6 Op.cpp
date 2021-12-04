@@ -13,6 +13,10 @@ void func1(double a, double b, double c) {
 	else
 		cout << "Square = " << formula(a, b, c) << endl;
 }
+
+
+
+
 void inp(double &a, double &b, double &c) {
 	do {
 		cout << "Введіть довжини сторін трикутника\n а = "; cin >> a;
@@ -23,23 +27,31 @@ void inp(double &a, double &b, double &c) {
 
 }
 
+void max_square(double Sq1, double Sq2, double Sq3) {
+	if ((Sq1 > Sq2) && (Sq1 > Sq3))
+		cout << " 1 Трикутник найбільший \n";
+
+	else if ((Sq2 > Sq1) && (Sq2 > Sq3)) 
+		cout << " 2 Трикутник найбільший \n";
+	else if ((Sq3 > Sq1) && (Sq3 > Sq2)) 
+		cout << " 3 Трикутник найбільший \n";
+
+
+}
 
 int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-	double a = 0, b = 0, c=0, a1=0, b1=0, c1=0, a2=0, b2=0, c2=0;
+	double a , b , c, a1, b1, c1, a2, b2, c2;
 	inp(a, b, c);
 
 	inp(a1, b1, c1);
-
+	double Max;
 	inp(a2, b2, c2);
-	if ((formula(a, b, c)) > (formula(a1, b1, c1)) && (formula(a, b, c)) > (formula(a2, b2, c2)))
-		cout << "Перший трикутник найбільший";
-	else if ((formula(a1, b1, c1)) > (formula(a, b, c)) && (formula(a1, b1, c1)) > (formula(a2, b2, c2)))
-		cout << "Другий трикутник найбільший";
-	else if ((formula(a2, b2, c2)) > (formula(a, b, c)) && (formula(a2, b2, c2)) > (formula(a1, b1, c1)))
-		cout << "Третій трикутник найбільший";
-
-
+	double Sq1 = formula(a, b, c);
+	double Sq2 = formula(a1, b1, c1);
+	double Sq3 = formula(a2, b2, c2);
+	max_square(Sq1, Sq2, Sq3);
+	
 }
