@@ -1,17 +1,17 @@
-﻿#include <iostream>
+
+#include <iostream>
 #include <stdio.h>
 #include <string>
 
-int FindSum(char str[], std::string mas);
+int FindSum(char str[]);
 int main() {
 	char s[255];
-	std::string arr;
 	std::cout << "Enter groups of numbers: "; gets_s(s);
-	int i = FindSum(s, arr);
-	std::cout << "Sum = "<< i;
+	int i = FindSum(s);
+	std::cout << "Sum = " << i;
 
 }
-int FindSum(char str[], std::string mas) {
+int FindSum(char str[]) {
 	int sum = 0;
 	int currentNum = 0;
 	const char* delim = " ";
@@ -25,3 +25,4 @@ int FindSum(char str[], std::string mas) {
 	}
 	return sum;
 }
+
